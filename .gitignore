@@ -1,0 +1,21 @@
+# system
+.DS_Store
+
+# IDE
+.vscode/
+
+# data (NIET in Git)
+data/
+output/
+
+# results (NIET in Git)
+*.csv
+*.parquet
+*.xlsx
+
+# python cache
+__pycache__/
+*.pyc
+
+# notebooks
+.ipynb_checkpoints/

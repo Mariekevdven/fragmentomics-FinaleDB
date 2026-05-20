@@ -80,7 +80,7 @@ qc_results = []
 
 # loop
 for file in files:
-    sample_name = file.name.replace(".frag.tsv.bgz", "")
+    sample_name = file.name.replace(".hg38.frag.tsv.bgz", "")
 
     print(f"Processing {sample_name}")
 
@@ -107,7 +107,3 @@ raw_df.to_csv("fragment_length_raw_counts.csv")
 norm_df.to_csv("fragment_length_normalized_counts.csv")
 qc_df.to_csv("fragment_length_qc_metrics.csv", index=False)
 
-#check plots
-raw_df.T.plot() #om verschil te zien na normalisatie
-norm_df.T.plot()
-qc_df.plot(x="sample", y="ratio", kind="bar")
