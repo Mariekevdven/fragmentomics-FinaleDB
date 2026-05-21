@@ -66,6 +66,16 @@ def process_sample(path, MAPQ_cutoff=55, max_len=400):
     return raw_series, norm_series, total_filtered, total_raw
 
 #---------------------------------------------------------
+# END MOTIFS
+
+#---------------------------------------------------------
+
+chrom = chr_n
+
+five_prime = str(genome[chrom][start:start+4]).upper()
+three_prime = str(genome[chrom][end-4:end]).upper()
+
+#---------------------------------------------------------
 # MAIN PIPELINE
 #---------------------------------------------------------
 
